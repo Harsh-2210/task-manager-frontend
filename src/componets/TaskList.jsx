@@ -134,7 +134,9 @@ const TaskList = () => {
           {tasks.map((task) => (
             <div key={task._id} className="p-4 border rounded-lg shadow-sm bg-gray-50">
               <h3 className="text-lg font-semibold text-gray-800">{task.title}</h3>
-              <p className="text-gray-600">{task.description}</p>
+             <p className="text-gray-600">{task.description}</p>
+<p className="mt-1 text-xs text-gray-500">Created: {new Date(task.createdAt).toLocaleString()}</p>
+
               <span className={`inline-block mt-2 px-3 py-1 text-sm rounded-full ${
                 task.status === 'Completed'
                   ? 'bg-green-200 text-green-800'
